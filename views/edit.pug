@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method="PUT", action="/estudiantes/"+estudiante._id)
+        #form-group
+            label Nombre: 
+            input.form-control(name='nombre', type='text', value=estudiante.nombre)
+        #form-group
+            label Edad: 
+            input.form-control(name='edad', type='text', value=estudiante.edad)
+        #form-group
+            label Carrera: 
+            input.form-control(name='carrera', type='text', value=estudiante.carrera)
+        input.btn.btn-primary(type='submit', value='Submit')

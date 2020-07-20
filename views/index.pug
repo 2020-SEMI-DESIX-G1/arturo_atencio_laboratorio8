@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 #{title}
+    ul
+        each estudiante, i in estudiantes
+            ul.list-group
+                li.list-group-item
+                    a(href="/estudiantes/"+estudiante._id)= estudiante.nombre
+                li.list-group-item= estudiante.edad
+                li.list-group-item= estudiante.carrera
+            br

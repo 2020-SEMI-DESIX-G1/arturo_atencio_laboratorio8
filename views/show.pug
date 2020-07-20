@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= estudiante.nombre
+    h3= estudiante.edad
+    h2= estudiante.carrera
+    br
+    a.btn.btn-default(href='/estudiantes/edit/'+estudiante._id) Actualizar
